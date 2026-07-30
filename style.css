@@ -529,6 +529,31 @@ code {
   box-shadow: 0 16px 48px rgba(30, 30, 30, 0.22);
 }
 
+/* ---------- LISTAS DE CONTEÚDO ---------- */
+.content-list {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto var(--space-md);
+  padding: 0;
+  list-style: none;
+}
+
+.content-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: var(--space-sm);
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.content-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+}
+
 /* ---------- BENEFÍCIOS ---------- */
 .benefits__title {
   font-family: var(--font-serif);
@@ -541,7 +566,7 @@ code {
 .benefits-list {
   text-align: left;
   max-width: 400px;
-  margin: 0 auto var(--space-lg);
+  margin: var(--space-md) auto var(--space-lg);
 }
 
 .benefits-list li {
