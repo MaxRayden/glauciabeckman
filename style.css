@@ -569,6 +569,56 @@ code {
   margin: var(--space-md) auto var(--space-lg);
 }
 
+/* ---------- PREÇO DO E-BOOK ---------- */
+.ebook-price {
+  margin: 0 auto var(--space-md);
+  max-width: 360px;
+  text-align: center;
+}
+
+.ebook-price__from {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.ebook-price__from s {
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  text-decoration-thickness: 1.5px;
+}
+
+.ebook-price__to {
+  font-family: var(--font-sans);
+  font-size: 1.375rem;
+  line-height: 1.35;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.ebook-price__to strong {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.ebook-price__or {
+  display: inline-block;
+  margin-inline: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.ebook-price__offer {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  line-height: 1.5;
+}
+
 .benefits-list li {
   position: relative;
   padding-left: 1.75rem;
