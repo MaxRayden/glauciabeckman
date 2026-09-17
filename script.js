@@ -55,6 +55,14 @@
         nav.classList.remove('nav--open');
       }
     });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('nav--open')) {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('nav--open');
+        toggle.focus();
+      }
+    });
   }
 
   /* ---------- Header shadow on scroll ---------- */
@@ -65,7 +73,7 @@
       'scroll',
       () => {
         if (window.scrollY > 60) {
-          hero.style.boxShadow = '0 1px 0 rgba(30,30,30,0.06)';
+          hero.style.boxShadow = '0 1px 0 rgba(60,42,30,0.08)';
         } else {
           hero.style.boxShadow = 'none';
         }
