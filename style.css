@@ -895,7 +895,7 @@ code {
 
 .action-card {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: var(--space-sm);
   min-height: 72px;
@@ -916,28 +916,6 @@ code {
 
 .action-card--primary {
   background: var(--color-sand);
-}
-
-.action-card--quiet {
-  color: var(--color-bg);
-  background: transparent;
-  border-color: rgba(248, 242, 231, 0.35);
-}
-
-.action-card--quiet:hover {
-  background: rgba(248, 242, 231, 0.08);
-}
-
-.action-card__ornament {
-  display: grid;
-  place-items: center;
-  width: 2rem;
-  height: 2rem;
-  color: var(--color-gold);
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  font-size: 0.68rem;
-  font-weight: 700;
 }
 
 .action-card__content {
@@ -1110,6 +1088,149 @@ code {
   filter: brightness(0) invert(1);
 }
 
+/* ---------- NÍVEIS DE PREÇO ---------- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: var(--space-lg);
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem 1.5rem 1.5rem;
+  background: var(--color-sand);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+}
+
+.pricing-card .eyebrow {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.pricing-card .text-body {
+  max-width: none;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.pricing-card .check-list {
+  flex: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.pricing-card .btn {
+  white-space: nowrap;
+  padding-inline: 1rem;
+}
+
+.pricing-card--featured {
+  border: 2px solid var(--color-gold);
+}
+
+.pricing-card__badge {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  padding: 4px 12px;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pricing-card__title {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.pricing-card__price {
+  margin: 0;
+  color: var(--color-gold);
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.pricing-card__period {
+  margin: -0.35rem 0 0.25rem;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.pricing-guide {
+  max-width: 720px;
+  margin: var(--space-lg) auto 0;
+  padding: 1.5rem;
+  background: var(--color-sand);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.pricing-guide .text-body {
+  max-width: none;
+  margin-bottom: 0.75rem;
+}
+
+.pricing-guide .text-body:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  float: right;
+  color: var(--color-gold);
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item p {
+  margin-top: 0.75rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 /* ---------- RODAPÉ R.P.F. ---------- */
 .footer {
   background: var(--color-text);
@@ -1189,6 +1310,17 @@ code {
 
   .journey-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 860px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
   }
 }
 
